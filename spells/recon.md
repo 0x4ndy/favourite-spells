@@ -238,3 +238,9 @@ snmpwalk -c <community_string> -v1 <ip> 1.3.6.1.2.1.25.6.3.1.2
 sudo nmap --script vuln <ip>
 ```
 ---
+
+### nikto: web server scanning
+```bash
+nikto --host=<url> -C all
+```
+---
