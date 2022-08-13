@@ -1,4 +1,18 @@
+# Web content (files and folders)
+### dirb: non-recursive scan with a delay between request
+```bash
+dirb <url> -r -z <time_milliseconds>
+```
+---
+
 # Web files
+
+### wfuzz: fuzzing for files with a wordlist, excluding 404
+```bash
+export URL=http://$IP/FUZZ 
+wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 "$URL"
+```
+---
 
 ### FFuf: Web file extensions fuzzing with FFuF
 ```bash
@@ -13,6 +27,13 @@ ffuf -w <wordlist>:FUZZ -u http://<ip>:<port>/FUZZ.<extension>
 ---
 
 # Web directories
+
+### wfuzz: fuzzing for directories with a wordlist, excluding 404
+```bash
+export URL=http://$IP/FUZZ/
+wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt --hc 404 "$URL"
+```
+---
 
 ### FFuF: Directory fuzzing with FFuF
 ```bash
@@ -67,3 +88,4 @@ ffuf -w <wordlist>:FUZZ -u http(s)://<domain>:<port>/<path>?<parameter-name>=FUZ
 ffuf -w <wordlist>:FUZZ -u http(s)://<domain>:<port>/<path> -X POST -d '<param-name>=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded'
 ```
 ---
+
