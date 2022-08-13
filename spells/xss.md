@@ -2,7 +2,10 @@
 
 ### references: special characters for HTML and javascript
 ```
-< > ' " { } ;
+< > - used to denote HTML elements 
+' " - strings
+{ } - javascript function declarations
+;   - end of statement
 ```
 ---
 
