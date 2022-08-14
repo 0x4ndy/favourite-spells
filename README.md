@@ -24,4 +24,5 @@ git clone https://github.com/0x4ndy/best-spell.git <project-directory>
 ### [Transfers](https://github.com/0x4ndy/best-spells/blob/master/spells/transfers.md)
 - [NSF](https://github.com/0x4ndy/best-spells/blob/master/spells/transfers.md#NFS)
 ### [XSS](https://github.com/0x4ndy/best-spells/blob/master/spells/xss.md)
+- [References](https://github.com/0x4ndy/best-spells/blob/master/spells/xss.md#References)
 - [Payloads](https://github.com/0x4ndy/best-spells/blob/master/spells/xss.md#Payloads)
