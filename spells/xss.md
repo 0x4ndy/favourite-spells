@@ -1,4 +1,4 @@
-# references
+# References
 
 ### references: special characters for HTML and javascript
 ```
