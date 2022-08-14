@@ -1,6 +1,6 @@
 # References
 
-### references: special characters for HTML and javascript
+### reference: special characters for HTML and javascript
 ```
 < > - used to denote HTML elements 
 ' " - strings
