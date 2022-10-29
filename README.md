@@ -1,10 +1,10 @@
-# Best Spells
-This repository contains a list of my favourite and most used spells (commands and arguments), separated into a number of categories categories. See the list of categories below.
+# Favourite Spells
+This repository contains a list of my favourite and most used spells (commands and arguments), separated into a number of categories. See the list of categories below.
 
 ## Set up
 Checkout the GitHub repository:
 ```bash
-git clone https://github.com/0x4ndy/best-spell.git <project-directory>
+git clone https://github.com/0x4ndy/favourite-spell.git <project-directory>
 ```
 
 ## Table of Contents
