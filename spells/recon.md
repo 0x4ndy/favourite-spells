@@ -2,7 +2,7 @@
 
 ### bash: one-liner forward lookup brute force
 ```bash
-for ip in $(cat <file-name.txt>); do host $ip.<domain>; done | grep -v "not found"
+for ip in $(cat <file_name.txt>); do host $ip.<domain>; done | grep -v "not found"
 ```
 ---
 ### bash: one-liner reverse lookup brute force
