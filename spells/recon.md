@@ -231,6 +231,37 @@ snmpwalk -c <community_string> -v1 <ip> 1.3.6.1.2.1.25.6.3.1.2
 ```
 ---
 
+# HTTP
+
+### nmap: enumerate HTTP
+```bash
+nmap -p <port> --script=http-enum <ip>
+```
+---
+
+### nmap: enumerate HTTP methods on a specific URI
+```bash
+nmap -p <port> --script=http-methods --script-args http-methods.url-path='<URI>' <ip>
+```
+---
+
+### nmap: enumerate Wordpress
+```bash
+nmap -p <port> -sV --script=http-wordpress-enum <ip>
+```
+---
+
+### nmap: useful NSE scripts
+```bash
+http-methods
+http-headers
+http-ls
+http-robots.txt
+http-cookie-flags
+http-cors
+```
+---
+
 # VULNs
 
 ### nmap: vulnerability scanning

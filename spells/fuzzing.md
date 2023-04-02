@@ -1,4 +1,5 @@
 # Web content (files and folders)
+
 ### dirb: non-recursive scan with a delay between request
 ```bash
 dirb <url> -r -z <time_milliseconds>
