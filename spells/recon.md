@@ -40,6 +40,11 @@ dnsenum <domain_name>
 nmap --script=dns-zone-transfer -p 53 <dns_server/domain>
 ```
 ---
+### hakrawler: subdomain and endpoint discovery
+```bash
+hakrawler "<url>"
+```
+---
 
 # Ports
 

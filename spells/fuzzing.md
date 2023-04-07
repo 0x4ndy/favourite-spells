@@ -14,19 +14,16 @@ export URL=http://$IP/FUZZ
 wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 "$URL"
 ```
 ---
-
 ### FFuf: Web file extensions fuzzing with FFuF
 ```bash
 ffuf -w <wordlist>:FUZZ -u http://<ip>:<port>/<file_name>FUZZ
 ```
 ---
-
 ### FFuF: Web file names fuzzing with FFuF
 ```bash
 ffuf -w <wordlist>:FUZZ -u http://<ip>:<port>/FUZZ.<extension>
 ```
 ---
-
 # Web directories
 
 ### wfuzz: fuzzing for directories with a wordlist, excluding 404
@@ -35,7 +32,6 @@ export URL=http://$IP/FUZZ/
 wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-directories.txt --hc 404 "$URL"
 ```
 ---
-
 ### FFuF: Directory fuzzing with FFuF
 ```bash
 ffuf -w <wordlist>:FUZZ -u http://<ip>:<port>/FUZZ
@@ -65,6 +61,36 @@ ffuf -w <wordlist>:FUZZ -u http(s)://<domain>:<port>/ -H 'Host: FUZZ.<domain>'
 ---
 
 # Parameters
+
+### wfuzz: Fuzzing GET parameters with wfuzz
+
+```bash
+export URL="http://$IP/index.php?FUZZ=data"
+wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt --hc 404,301 "$URL"
+
+# notes:
+# use FUZ2Z, FUZ3Z, etc, for multiple parameters
+```
+---
+
+### wfuzz: Fuzzing GET parameters value with wfuzz
+```bash
+export URL="http://$IP/index.php?<parameter-name>=FUZZ"
+wfuzz -c -z file,/usr/share/seclists/Usernames/cirt-default-usernames.txt --hc 404 "$URL"
+
+# notes:
+# use FUZ2Z, FUZ3Z, etc, for multiple parameters
+```
+---
+
+### wfuzz: Fuzzing POST parameters value with wfuzz
+```bash
+wfuzz -c -z file,/usr/share/seclists/Passwords/xato-net-10-million-passwords-100000.txt --hh <ok_resp_size> -d "login=admin&password=FUZZ" "$URL/login.php"
+
+# notes:
+# -b - cookies value
+```
+---
 
 ### FFuF: Fuzzing GET parameters with FFuF
 ```bash
