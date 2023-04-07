@@ -6,6 +6,15 @@ dirb <url> -r -z <time_milliseconds>
 ```
 ---
 
+### gobuster: endpoint discovery
+```bash
+gobuster dir -u http://<ip>/ -w <wordlist> -s '200,204,301,302,307,403,500' -e
+
+# -b - opposite to '-s'
+# -t - number of threads
+```
+---
+
 # Web files
 
 ### wfuzz: fuzzing for files with a wordlist, excluding 404
@@ -49,6 +58,12 @@ ffuf -w <wordlist>:FUZZ -u http://<ip>:<port>/FUZZ -recursion -recursion-depth 1
 ---
 
 # Sub-domains
+
+### gobuster: subdomain enumeration
+```bash
+gobuster dns -d <domain> -w <wordlist> -t 30
+```
+---
 
 ### FFuF: Fuzzing sub-domains with FFuF
 ```bash
