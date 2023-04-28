@@ -9,6 +9,12 @@
 ```
 ---
 
+### reference: substitutions
+```
+; -> + # some application servers and firewalls block semicolons ';'
+```
+---
+
 ### php: file extension bypass
 ```
 %00 # null byte in the URL will bypass the file extension in older PHP servers 
